@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{> admin/admin-header}}
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+
+  {{> admin/admin-nav}}
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Blank Page</li>
+      </ol>
+      <div class="row">
+        {{{body}}}
+      </div> <!-- /.row -->
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+
+    {{!-- footer --}}
+    {{> admin/admin-footer }}
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+      {{> admin/logout-modal}}
+
+    {{!-- Javascript file --}}
+    {{> admin/javascript}}
+
+  </div>
+</body>
+
+</html>
