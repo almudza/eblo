@@ -21,14 +21,21 @@ router.get('/*', (req, res, next) => {
 
 
 /**
- * ================================= Route Posts Admin ==============================
+ * ================================= Route All Posts ==============================
  */
 router.get('/', (req, res) => {
 
-    res.render('admin/index');
+    res.render('admin/posts/index');
 
 });
 
+/**
+ * ================================= Route Get Create Posts ==============================
+ */
+router.get('/create', (req, res) => {
+   
+    res.render('admin/posts/create');
+});
 
 
 // Exports Module
