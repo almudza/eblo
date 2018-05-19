@@ -7,7 +7,9 @@ const app = express(); // init app
 const path = require('path');
 const exphbs = require('express-handlebars');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
+// mongoose.Promise = global.Promise; jika mongoose terdapata warning deprecated promise
 
 // Set mongoDB mongoose
 mongoose.connect('mongodb://localhost:27017/blog-cms').then(() => {
@@ -24,6 +26,12 @@ app.set('views', path.join(__dirname, 'views'));
 // Set Engine Express-Hadlebars
 app.engine('handlebars', exphbs({defaultLayout: 'home'}));
 app.set('view engine', 'handlebars');
+
+// BodyParser
+app.use(bodyParser.urlencoded({ extended: false }));
+// parse app/json
+app.use(bodyParser.json());
+
 
 /**
  * ========================= Require Router =======================

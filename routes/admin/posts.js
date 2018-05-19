@@ -38,5 +38,13 @@ router.get('/create', (req, res) => {
 });
 
 
+/**
+ * ================================= Route Post Create Posts ==============================
+ */
+router.post('/create', (req, res) => {
+
+    console.log(req.body);
+})
+
 // Exports Module
 module.exports = router;
