@@ -9,7 +9,9 @@ const exphbs = require('express-handlebars');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-// mongoose.Promise = global.Promise; jika mongoose terdapata warning deprecated promise
+
+// Map global promise
+mongoose.Promise = global.Promise; //jika mongoose terdapata warning deprecated promise
 
 // Set mongoDB mongoose
 mongoose.connect('mongodb://localhost:27017/blog-cms').then(() => {

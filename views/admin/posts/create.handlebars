@@ -13,10 +13,15 @@
         <label for="title">Title</label>
         <input type="text" name="title" class="form-control" id="title" placeholder="Title">
         </div>
+
         <div class="form-group col-md-5">
-        <label for="skug">Slug</label>
-        <input type="text" name="slug" class="form-control" id="slug" placeholder="Slug">
-        </div>
+            <label for="status">Status</label>
+            <select name="status" id="status" class="form-control">
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+                <option value="draft">Draft</option>
+            </select>
+        </div>       
     </div>
    
    <div class="form-row">
@@ -29,14 +34,7 @@
         </div>
     </div>
 
-    <div class="form-group col-md-5">
-        <label for="status">Status</label>
-        <select name="status" id="status" class="form-control">
-            <option value="public">Public</option>
-            <option value="private">Private</option>
-            <option value="draft">Draft</option>
-        </select>
-    </div>
+  
    </div>
 
 

@@ -8,9 +8,6 @@ const PostSchema = new Schema({
         type: String,
         required: true
     },
-    slug: {
-        type: String
-    },
     status: {
         type: String,
         default: 'public'
