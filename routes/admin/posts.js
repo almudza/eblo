@@ -26,7 +26,9 @@ router.get('/*', (req, res, next) => {
  */
 router.get('/', (req, res) => {
 
-    res.render('admin/posts/index');
+    Post.find({}).then(posts => {
+        res.render('admin/posts', {posts: posts});       
+    }, err => console.log(err));
 
 });
 
@@ -52,7 +54,7 @@ router.post('/create', (req, res) => {
         allowComments = false;
     }
 
-    const newPost = new Post({
+    const newPost = Post({
         title: req.body.title,
         status: req.body.status,
         allowComments: allowComments,
