@@ -13,6 +13,7 @@
                 <th>Title</th>
                 <th>Status</th>
                 <th>Allow Comments</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@
                 <td>{{title}}</td>
                 <td>{{status}}</td>
                 <td>{{allowComments}}</td>
+                <td><a href="/admin/posts/edit/{{id}}">edit</a></td>
             </tr>
             {{/each}}
         </tbody>

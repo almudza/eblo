@@ -48,7 +48,7 @@ router.post('/create', (req, res) => {
 
     let allowComments = true;
 
-    if(req.body.allowComments = true) {
+    if(req.body.allowComments) {
         allowComments = true;
     } else {
         allowComments = false;
@@ -69,8 +69,21 @@ router.post('/create', (req, res) => {
     }).catch(error => {
         
         console.log(error);
-    })
-})
+    });
+});
+
+/**
+ * ================================= Route Get Edit Posts ==============================
+ */
+router.get('/edit/:id', (req, res) => {
+
+    Post.findById({_id:req.params.id}).then(post => {
+        
+        res.render('admin/posts/edit', {
+            post
+        });
+    }).catch(err => console.log(err));
+});
 
 // Exports Module
 module.exports = router;
